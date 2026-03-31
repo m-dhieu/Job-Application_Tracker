@@ -313,27 +313,10 @@ For detailed testing documentation, see `tests/README.md`
 This project was developed and tested on:
 
 <!-- ubuntu -->
-<a href="https://ubuntu.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A" alt="Ubuntu"></a>
-
-<!-- bash -->
-<a href="https://www.gnu.org/software/bash/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A" alt="Bash"></a>
-
-<!-- python -->
-<a href="https://www.python.org" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Python&color=FFD43B&logo=python&logoColor=3776AB&labelColor=2F333A" alt="Python"></a>
-
-<!-- fastapi -->
-<a href="https://fastapi.tiangolo.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=FastAPI&color=009688&logo=fastapi&logoColor=009688&labelColor=2F333A" alt="FastAPI"></a>
-
-<!-- docker -->
-<a href="https://www.docker.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Docker&color=2496ED&logo=docker&logoColor=2496ED&labelColor=2F333A" alt="Docker"></a>
-
-<!-- vs code -->
-<a href="https://code.visualstudio.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=VS%20Code&color=5C2D91&logo=Visual%20Studio%20Code&logoColor=5C2D91&labelColor=2F333A" alt="VS Code"></a>
-
-<!-- git -->
-<a href="https://git-scm.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A" alt="Git"></a>
-
-<!-- github -->
+<a href="https://ubuntu.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A" alt="Ubuntu"></a><!-- bash --><a href="https://www.gnu.org/software/bash/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A" alt="Bash"></a><!-- python --><a href="https://www.python.org" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Python&color=FFD43B&logo=python&logoColor=3776AB&labelColor=2F333A" alt="Python"></a><!-- fastapi --><a href="https://fastapi.tiangolo.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=FastAPI&color=009688&logo=fastapi&logoColor=009688&labelColor=2F333A" alt="FastAPI"></a><!-- docker -->
+<a href="https://www.docker.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Docker&color=2496ED&logo=docker&logoColor=2496ED&labelColor=2F333A" alt="Docker"></a><!-- vs code -->
+<a href="https://code.visualstudio.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=VS%20Code&color=5C2D91&logo=Visual%20Studio%20Code&logoColor=5C2D91&labelColor=2F333A" alt="VS Code"></a><!-- git -->
+<a href="https://git-scm.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A" alt="Git"></a><!-- github -->
 <a href="https://github.com" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="GitHub"></a>
 
 ---
