@@ -1,0 +1,254 @@
+/* Reset and base styles for dashboard */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f8fc;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f0f4fa;
+  width: 250px;
+  padding: 32px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: 2px 0 16px rgba(24,49,83,0.05);
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #183153;
+  padding: 0 32px 32px 32px;
+  letter-spacing: 1px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  display: flex;
+  align-items: center;
+  padding: 14px 32px;
+  color: #183153;
+  font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background 0.2s;
+}
+
+.sidebar nav li.active,
+.sidebar nav li:hover {
+  background: #e6f0fa;
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 1.2em;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 40px 0 40px;
+  background: #f7faff;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #183153;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #c82333 0%, #a71e2a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+.menu-btn {
+  background: #e6f0fa;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: none;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0 24px 0;
+}
+
+.stat-card {
+  background: #e6f0fa;
+  border-radius: 12px;
+  padding: 24px 32px;
+  min-width: 180px;
+  text-align: left;
+  box-shadow: 0 2px 12px rgba(24,49,83,0.06);
+}
+
+.stat-title {
+  color: #6b7a90;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #183153;
+}
+
+.applications-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(24,49,83,0.07);
+  padding: 28px 24px 24px 24px;
+  margin-bottom: 40px;
+}
+
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.applications-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #183153;
+}
+
+.filter-btn {
+  background: #e6f0fa;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  color: #183153;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.applications-table th,
+.applications-table td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+.applications-table th {
+  color: #6b7a90;
+  font-weight: 500;
+  background: #f7faff;
+}
+
+.applications-table tr {
+  border-bottom: 1px solid #e6f0fa;
+}
+
+.applications-table tr:last-child {
+  border-bottom: none;
+}
+
+.arrow {
+  color: #b0b8c9;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    border-radius: 0;
+    padding: 0;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .sidebar nav li {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 14px 10px;
+    justify-content: center;
+  }
+  .main-content {
+    padding: 20px 5vw 0 5vw;
+    border-radius: 0;
+  }
+  .stats-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .applications-section {
+    padding: 16px 4px 12px 4px;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
