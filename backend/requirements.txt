@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+databases
+sqlalchemy
+requests
+python-dotenv
+python-multipart
+PyPDF2
+python-docx
+pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+beautifulsoup4
