@@ -71,7 +71,7 @@ jobs:
 
       - name: Docker build and push completion
         run: |
-          echo "✅ Docker images successfully built and pushed to Docker Hub!"
+          echo "Docker images successfully built and pushed to Docker Hub!"
           echo "Repository: ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker"
           echo ""
           echo "Backend API Tags:"
