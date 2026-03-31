@@ -1,0 +1,83 @@
+#--------------------------------------------
+# File Name:   docker-build-push.yml
+# Description: Automates image build and push to Docker Hub
+# Author:      Monica Dhieu
+# Purpose:     CI/CD pipeline for building and pushing Docker images
+#              for both backend API and frontend web server
+#              on push to main/master branches
+#--------------------------------------------
+
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - name: Extract metadata for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker
+          tags: |
+            type=raw,value=latest
+            type=sha,format=short
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+      
+      - name: Build and push FastAPI Backend Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: backend/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:api-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:api-${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:buildcache-api
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:buildcache-api,mode=max
+
+      - name: Build and push Nginx Web Server Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: nginx/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:web-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:web-${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:buildcache-web
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker:buildcache-web,mode=max
+
+      - name: Docker build and push completion
+        run: |
+          echo "✅ Docker images successfully built and pushed to Docker Hub!"
+          echo "Repository: ${{ secrets.DOCKERHUB_USERNAME }}/job-application-tracker"
+          echo ""
+          echo "Backend API Tags:"
+          echo "  - api-latest"
+          echo "  - api-${{ github.sha }}"
+          echo ""
+          echo "Frontend Web Tags:"
+          echo "  - web-latest"
+          echo "  - web-${{ github.sha }}"
