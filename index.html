@@ -1,0 +1,76 @@
+<!--Landing Page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Tracker Landing Page</title>
+  <!-- Link to CSS stylesheet -->
+  <link rel="stylesheet" href="/static/frontend/css/index.css" />
+</head>
+<body>
+  <div class="landing-container">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=1200&q=80" alt="Job Tracking" class="header-img" />
+
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#faq-section">FAQ</a></li>
+          <li><a href="/login" target="_blank" rel="noopener">Login</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-overlay"></div>
+
+      <div class="header-content">
+        <h1>Job Tracker</h1>
+        <p class="subtitle">Stay on track, get the job you deserve</p>
+        <a href="/login" class="cta-btn" target="_blank" rel="noopener">Get Started</a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about-section" class="about">
+      <h2>About</h2>
+      <p>
+        Job Tracker is your personal dashboard for managing every stage of your job search.<br />
+        <span class="highlight">Find new opportunities</span>, 
+        <span class="highlight">track ongoing applications</span>, and 
+        <span class="highlight">receive smart guidance</span> — all in one intuitive space.
+      </p>
+
+      <!-- Key Features Section -->
+      <div class="key-features">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Comprehensive Job Listings: Easily browse and discover jobs tailored to your profile.</li>
+          <li>Application Progress Tracking: Keep tabs on every application stage — submitted, interviewed, offers, and more.</li>
+          <li>Reminders & Notifications: Never miss an important follow-up or deadline with customizable alerts.</li>
+          <li>Resume & Cover Letter Management: Store and manage multiple customizable documents for each application.</li>
+          <li>Essay Review: Easily review your essays for grammar errors and flow for each application.</li>
+          <li>Data Privacy: Your information is securely stored in your browser, with zero third-party data sharing.</li>
+          <li>Simple & Clean Interface: Focus on your job hunt without distractions with our minimal design.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="faq">
+      <h2>FAQ</h2>
+      <ul>
+        <li><strong>Is it free?</strong> Yes, Job Tracker is free to use—no subscriptions.</li>
+        <li><strong>Do I need to register?</strong> For your security and to save progress, login is required.</li>
+        <li><strong>How is my data stored?</strong> Your data is saved in your browser only. No information leaves your device.</li>
+        <li><strong>How does it help me?</strong> Organize applications, get reminders, improve your CV, and never miss a follow-up.</li>
+        <li><strong>What if I need support?</strong> Contact us via the Support link on your dashboard after login!</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Link to JavaScript file -->
+  <script src="/static/frontend/js/index.js"></script>
+</body>
+</html>
